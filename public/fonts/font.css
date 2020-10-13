@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'SegoeUI Semibold';
+    src: url(SegoeUISemibold.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'SegoeUI Light';
+    src: url(SegoeUILight.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'SegoeUI Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('SegoeUI.ttf') format('truetype');
+}

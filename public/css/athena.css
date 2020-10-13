@@ -1,0 +1,255 @@
+html {
+    font-size: 10px;
+}
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.container .container-header {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    background-color: transparent;
+    position: fixed;
+    z-index: 1;
+    width: calc(100% - 10rem);
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 5rem;
+}
+
+.nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.container-header .nav li {
+    margin: auto 0;
+}
+
+.container-header .nav li a {
+    font-family: 'SegoeUI Semibold';
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.702);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    padding: 0 3rem;
+    cursor: pointer;
+    transition: color .5s cubic-bezier(.59, .08, .385, 1);
+    -webkit-transition: color .5s cubic-bezier(.59, .08, .385, 1);
+    -ms-transition: color .5s cubic-bezier(.59, .08, .385, 1);
+    letter-spacing: .2rem;
+    text-decoration: none;
+    background-color: transparent;
+    position: relative;
+}
+
+.container-header .nav li a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.inner-logo-desktop {
+    background: transparent url(../img/logo-desktop.png) no-repeat scroll center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 115px;
+    height: 89px;
+}
+
+.header-background-image {
+    background: transparent url(../img/banner_desktop.png) no-repeat scroll center center;
+    height: 100vh;
+    width: 100vw;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.slogan-text {
+    position: absolute;
+    top: 36.5rem;
+    left: 32rem;
+}
+
+.slogan-text h2 {
+    font-size: 1.6rem;
+    font-family: "SegoeUI Regular";
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: left;
+    letter-spacing: .35rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+.slogan-text h1 {
+    font-size: 6rem;
+    font-family: "SegoeUI Light";
+    color: rgb(255, 255, 255);
+    /* text-transform: uppercase; */
+    line-height: 1.333;
+    text-align: left;
+    letter-spacing: .35rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+.slogan-text span {
+    font-weight: bold;
+}
+
+.container-header .btn-brochure {
+    background-color: #cd9577;
+    font-size: 1.6rem;
+    font-family: 'SegoeUI Semibold';
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    width: 21rem;
+    height: 6rem;
+    text-align: center;
+    margin: auto 0;
+    text-decoration: none;
+    position: relative;
+}
+
+.btn-brochure::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #be734b;
+    transform-origin: top;
+    transform: scaleY(0) translateZ(0);
+    transition: transform .6s cubic-bezier(.165, .84, .44, 1);
+    -webkit-transition: transform .6s cubic-bezier(.165, .84, .44, 1);
+    -moz-transition: transform .6s cubic-bezier(.165, .84, .44, 1);
+    -o-transition: transform .6s cubic-bezier(.165, .84, .44, 1);
+}
+
+.btn-brochure:hover::before {
+    transform: scaleY(1) translateZ(0);
+}
+
+.btn-brochure span {
+    z-index: 2;
+    line-height: 6rem;
+    position: relative;
+    display: inline-block;
+    transform: scale(1);
+    transition: transform .6s cubic-bezier(.165, .84, .44, 1);
+    -webkit-transition: transform .6s cubic-bezier(.165, .84, .44, 1);
+    -moz-transition: transform .6s cubic-bezier(.165, .84, .44, 1);
+    -o-transition: transform 2s cubic-bezier(.165, .84, .44, 1);
+}
+
+.btn-brochure:hover span {
+    transform: scale(1.2);
+}
+
+.header-background-image a {
+    position: fixed;
+}
+
+.header-background-image a.phone {
+    width: 6rem;
+    height: 6rem;
+    left: 5rem;
+    top: 50rem;
+    text-align: center;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    z-index: 80;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    border: #b4cddc 2px solid;
+}
+
+.btn-next-screen {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    /* border: #cac6bd 3px solid; */
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #b4cddc;
+    margin-top: 26.5rem;
+    cursor: pointer;
+    /* box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.3); */
+}
+
+.btn-next-screen img {
+    position: absolute;
+    bottom: 3rem;
+}
+
+.header-background-image a.fb-logo {
+    width: 6rem;
+    height: 6rem;
+    text-align: center;
+    top: 40rem;
+    left: 5rem;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    z-index: 80;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    border: #b4cddc 2px solid;
+}
+
+.header-background-image a.fb-logo:hover,
+.header-background-image a.phone:hover,
+.btn-next-screen:hover {
+    background-color: #cd9577;
+    opacity: 1;
+}
+
+.header-background-image .fb-logo img {
+    text-align: center;
+    transition: all .5s cubic-bezier(.59, .08, .385, 1);
+    -webkit-transition: all .5s cubic-bezier(.59, .08, .385, 1);
+    -ms-transition: all .5s cubic-bezier(.59, .08, .385, 1);
+    content: url(../img/fb-logo.png);
+    line-height: 6rem;
+}
+
+.header-background-image .phone img {
+    transition: all .5s cubic-bezier(.59, .08, .385, 1);
+    -webkit-transition: all .5s cubic-bezier(.59, .08, .385, 1);
+    -ms-transition: all .5s cubic-bezier(.59, .08, .385, 1);
+    content: url(../img/phone-logo.png);
+    line-height: 6rem;
+}
