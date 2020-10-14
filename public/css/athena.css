@@ -138,14 +138,31 @@ html {
     display: flex;
 }
 
-.btn-brochure::before {
+.btn-map-utilities {
+    font-size: 1.6rem;
+    font-family: 'SegoeUI Semibold';
+    width: 28rem;
+    text-decoration: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    height: 6rem;
+    background-color: #082340;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 5rem;
+}
+
+.btn-brochure::before,
+.btn-map-utilities::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #be734b;
     transform-origin: top;
     transform: scaleY(0) translateZ(0);
     transition: transform .6s cubic-bezier(.165, .84, .44, 1);
@@ -154,12 +171,27 @@ html {
     -o-transition: transform .6s cubic-bezier(.165, .84, .44, 1);
 }
 
-.btn-brochure:hover::before {
+.btn-brochure::before {
+    background: #be734b;
+}
+
+.btn-map-utilities::before {
+    background: #3b628b;
+}
+
+.btn-brochure:hover::before,
+.btn-map-utilities:hover::before {
     transform: scaleY(1) translateZ(0);
 }
 
-.btn-brochure span {
-    z-index: 2;
+.btn-brochure img,
+.btn-map-utilities img {
+    z-index: 1;
+}
+
+.btn-brochure span,
+.btn-map-utilities span {
+    z-index: 1;
     position: relative;
     display: inline-block;
     transform: scale(1);
@@ -170,9 +202,10 @@ html {
     margin-right: 10px;
 }
 
-.btn-brochure:hover span {
+
+/* .btn-brochure:hover span {
     transform: scale(1.2);
-}
+} */
 
 .header-background-image a {
     position: fixed;
@@ -335,6 +368,10 @@ section.introduction {
     border-bottom: 2px solid #e6e9ec;
 }
 
+.introduction-left .building-infomation:last-child {
+    border-bottom: none;
+}
+
 .introduction-left .building-infomation h4 {
     font-size: 2rem;
     font-family: "SegoeUI Light";
@@ -352,7 +389,7 @@ section.introduction {
 
 .introduction-right img {
     width: 100%;
-    height: auto;
+    height: calc(100% - 3rem);
     position: absolute;
     top: 0;
     left: 0;
@@ -364,4 +401,211 @@ section.introduction {
     right: 100%;
     top: 0;
     max-width: 250px;
+}
+
+section.utilities {
+    width: 100%;
+    background-color: #f4f4f7;
+}
+
+section.utilities .inner-utilities {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    background-color: #f4f4f7;
+}
+
+.utilities .utilities-left {
+    width: 51.56%;
+    position: relative;
+}
+
+.utilities .utilities-right {
+    width: 48.44%;
+    position: relative;
+}
+
+.utilities .utilities-left img {
+    width: 100%;
+    height: auto;
+}
+
+.utilities .utilities-right {
+    padding-left: 11.5rem;
+    padding-top: 14rem;
+}
+
+.utilities-right h1 {
+    font-size: 4rem;
+    font-family: "UTM Americana Bold";
+    color: rgb(28, 32, 49);
+    line-height: 1.35;
+    text-align: left;
+}
+
+.utilities-right h1 strong {
+    color: #cd9577;
+}
+
+.utilities-right p {
+    font-size: 1.8rem;
+    font-family: "SegoeUI Regular";
+    color: rgb(101, 105, 123);
+    line-height: 1.667;
+    text-align: left;
+    max-width: 465px;
+    margin: 0;
+}
+
+section.apartment {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+section .inner-apartment {
+    background-color: #ffffff;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 13rem;
+}
+
+.inner-apartment .apartment-left {
+    width: 42.42%;
+    padding-top: 16.7rem;
+}
+
+.inner-apartment .apartment-right {
+    width: 57.68%;
+}
+
+.apartment-left h1 {
+    font-size: 4rem;
+    font-family: "UTM Americana Bold";
+    color: rgb(205, 149, 119);
+    text-align: left;
+    line-height: 8rem;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.apartment-left h1 strong {
+    color: #cd9577;
+}
+
+.apartment-left .typical-grounds {
+    display: flex;
+    max-width: 400px;
+    line-height: 7.8rem;
+    border-bottom: 2px solid #e6e9ec;
+}
+
+.typical-grounds h2 {
+    font-family: "UTM Americana Bold";
+    font-size: 2.4rem;
+    color: rgba(41, 64, 89, 0.51);
+    text-align: left;
+    margin: auto 0;
+    transition: all .5s cubic-bezier(.59, .08, .385, 1);
+    -webkit-transition: all .5s cubic-bezier(.59, .08, .385, 1);
+    -ms-transition: all .5s cubic-bezier(.59, .08, .385, 1);
+}
+
+.apartment-left #owl-carousel-1-dots {
+    list-style: none;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-right: 1rem;
+}
+
+.apartment-left #owl-carousel-1-dots .owl-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #e6cabb;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.apartment-left #owl-carousel-1-dots .owl-dot.active {
+    background-color: #cd9577;
+}
+
+.typical-grounds h2.active {
+    color: rgb(41, 64, 89);
+}
+
+section.project-development {
+    width: 100%;
+    background-color: #f4f4f7;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.project-development .inner-project-development {
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: #f4f4f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-development-left h1 {
+    font-size: 4rem;
+    font-family: "UTM Americana Bold";
+    color: rgb(8, 35, 64);
+    line-height: 1.35;
+    text-align: left;
+}
+
+.project-development-left h1 strong {
+    color: #cd9577;
+}
+
+.project-development-right {
+    max-width: 640px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-development-right .container-owl-carousel-2 {
+    max-width: 440px;
+    /* max-height: 150px; */
+}
+
+.project-development-right img.development-item {
+    text-align: center;
+    transition: content 1s cubic-bezier(.59, .08, .385, 1);
+    -webkit-transition: content 1s cubic-bezier(.59, .08, .385, 1);
+    -ms-transition: content 1s cubic-bezier(.59, .08, .385, 1);
+    cursor: pointer;
+    content: url(../img/btn-arrow.png);
+}
+
+.project-development-right .next-development-item {
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.project-development-right .prev-development-item:hover {
+    content: url(../img/btn-arrow-hover.png);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.project-development-right .next-development-item:hover {
+    content: url(../img/btn-arrow-hover.png);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+#owl-carousel-2 img {
+    width: 15rem;
+    height: 15rem;
 }
