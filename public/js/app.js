@@ -2,6 +2,7 @@ $(document).ready(function() {
     owlApartmentInit();
     owlDevelopmentProjectInit();
     owlDevelopmentController();
+    owlNewsInit();
 });
 
 function owlApartmentInit() {
@@ -33,6 +34,19 @@ function owlDevelopmentProjectInit() {
         loop: true,
         autoplay: false,
         margin: 95
+    });
+}
+
+function owlNewsInit() {
+    $('#owl-carousel-3').owlCarousel({
+        items: 3,
+        center: false,
+        nav: false,
+        autoHeight: true,
+        dots: false,
+        loop: true,
+        autoplay: false,
+        margin: 40
     });
 }
 
