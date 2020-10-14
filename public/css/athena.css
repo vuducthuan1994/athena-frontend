@@ -253,3 +253,42 @@ html {
     content: url(../img/phone-logo.png);
     line-height: 6rem;
 }
+
+section.introduction {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.introduction .introduction-left {
+    width: 60.55%;
+}
+
+.introduction .introduction-right {
+    width: 39.45%;
+}
+
+.title-section span {
+    font-family: 'SegoeUI Semibold';
+    font-size: 1.2rem;
+    color: rgb(8, 35, 64);
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 2.5px;
+}
+
+.title-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-section div {
+    display: inline-block;
+    width: 4rem;
+    height: 2px;
+    background-color: rgb(8, 35, 64);
+    opacity: 0.149;
+    margin-left: 20px;
+    margin-right: 20px;
+}
