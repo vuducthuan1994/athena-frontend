@@ -662,12 +662,60 @@ section .inner-news {
     color: rgb(101, 105, 123);
     text-align: left;
     line-height: 1.2;
+    cursor: pointer;
+    transition: all .5s cubic-bezier(.59, .08, .385, 1);
+    -webkit-transition: all .5s cubic-bezier(.59, .08, .385, 1);
+    -ms-transition: all .5s cubic-bezier(.59, .08, .385, 1);
+}
+
+.news-header-right .news-header-right-menu li:hover {
+    color: rgb(205, 149, 119);
 }
 
 .news-header-right .news-header-right-menu li.active {
     color: rgb(205, 149, 119);
 }
 
-.inner-image-post-container:hover img {
-    transform: scale(1.2);
+.news-content {
+    margin-top: 6.25rem;
+}
+
+.news-content .post-item {
+    position: relative;
+    transition: all .5s cubic-bezier(.59, .08, .385, 1);
+    -webkit-transition: all .5s cubic-bezier(.59, .08, .385, 1);
+    -ms-transition: all .5s cubic-bezier(.59, .08, .385, 1);
+}
+
+.news-content .post-item img {
+    cursor: pointer;
+}
+
+.news-content .post-item:hover img {
+    opacity: 0.8;
+}
+
+.news-content .post-item .preview {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 4rem;
+}
+
+.news-content .post-item .preview h3 {
+    font-size: 2.8rem;
+    font-family: "UTM Americana Bold";
+    color: rgb(255, 255, 255);
+    line-height: 1.929;
+    text-align: left;
+    margin: 0;
+}
+
+.news-content .post-item .preview p {
+    font-size: 1.8rem;
+    font-family: "SegoeUI Regular";
+    color: rgba(255, 255, 255, 0.702);
+    line-height: 1.667;
+    text-align: left;
+    margin: 0;
 }
