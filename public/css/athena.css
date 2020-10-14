@@ -663,6 +663,7 @@ section .inner-news {
     text-align: left;
     line-height: 1.2;
     cursor: pointer;
+    position: relative;
     transition: all .5s cubic-bezier(.59, .08, .385, 1);
     -webkit-transition: all .5s cubic-bezier(.59, .08, .385, 1);
     -ms-transition: all .5s cubic-bezier(.59, .08, .385, 1);
@@ -670,6 +671,23 @@ section .inner-news {
 
 .news-header-right .news-header-right-menu li:hover {
     color: rgb(205, 149, 119);
+}
+
+.news-header-right .news-header-right-menu li.active:before {
+    opacity: 1;
+}
+
+.news-header-right .news-header-right-menu li::before {
+    position: absolute;
+    bottom: -20px;
+    left: calc(50% - 5px);
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #cd9577;
+    content: "";
+    opacity: 0;
 }
 
 .news-header-right .news-header-right-menu li.active {
