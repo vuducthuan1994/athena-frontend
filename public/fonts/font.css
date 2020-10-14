@@ -10,7 +10,14 @@
 
 @font-face {
     font-family: 'SegoeUI Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: url('SegoeUI.ttf') format('truetype');
+    /* font-style: normal;
+    font-weight: normal; */
+    src: url(segoeui.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'UTM Americana Bold';
+    /* font-style: normal;
+    font-weight: normal; */
+    src: url(UTMAmericanaB.ttf) format('truetype');
 }

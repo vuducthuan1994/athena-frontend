@@ -13,6 +13,10 @@ html {
     height: auto;
 }
 
+.object-fit-cover {
+    object-fit: cover;
+}
+
 .container .container-header {
     display: flex;
     display: -webkit-flex;
@@ -76,7 +80,7 @@ html {
 .header-background-image {
     background: transparent url(../img/banner_desktop.png) no-repeat scroll center center;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-size: 100% 100%;
     position: relative;
 }
@@ -129,6 +133,9 @@ html {
     margin: auto 0;
     text-decoration: none;
     position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .btn-brochure::before {
@@ -153,7 +160,6 @@ html {
 
 .btn-brochure span {
     z-index: 2;
-    line-height: 6rem;
     position: relative;
     display: inline-block;
     transform: scale(1);
@@ -161,6 +167,7 @@ html {
     -webkit-transition: transform .6s cubic-bezier(.165, .84, .44, 1);
     -moz-transition: transform .6s cubic-bezier(.165, .84, .44, 1);
     -o-transition: transform 2s cubic-bezier(.165, .84, .44, 1);
+    margin-right: 10px;
 }
 
 .btn-brochure:hover span {
@@ -258,6 +265,8 @@ section.introduction {
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
+    padding-top: 13.6rem;
+    position: relative;
 }
 
 .introduction .introduction-left {
@@ -279,7 +288,7 @@ section.introduction {
 
 .title-section {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 
@@ -291,4 +300,68 @@ section.introduction {
     opacity: 0.149;
     margin-left: 20px;
     margin-right: 20px;
+}
+
+.introduction-right {
+    position: relative;
+}
+
+.introduction-left h1 {
+    font-size: 4rem;
+    font-family: "UTM Americana Bold";
+    color: rgb(8, 35, 64);
+    line-height: 1.35;
+    text-align: left;
+}
+
+.introduction-left h1 strong {
+    color: #cd9577;
+}
+
+.introduction-left p {
+    font-size: 1.8rem;
+    font-family: "SegoeUI Regular";
+    color: rgba(8, 35, 64, 0.702);
+    line-height: 1.667;
+    text-align: left;
+    max-width: 635px;
+}
+
+.introduction-left .building-infomation {
+    display: flex;
+    justify-content: space-between;
+    max-width: 622px;
+    line-height: 8rem;
+    border-bottom: 2px solid #e6e9ec;
+}
+
+.introduction-left .building-infomation h4 {
+    font-size: 2rem;
+    font-family: "SegoeUI Light";
+    color: rgb(8, 35, 64);
+    margin: auto 0;
+}
+
+.introduction-left .building-infomation h5 {
+    font-size: 3rem;
+    font-family: "SegoeUI Regular";
+    color: rgb(205, 149, 119);
+    margin: auto 0;
+    font-weight: normal;
+}
+
+.introduction-right img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 3rem 3rem #f0f0f0;
+}
+
+.introduction .vignette-pattern-left {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    max-width: 250px;
 }
