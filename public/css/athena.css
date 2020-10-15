@@ -177,7 +177,8 @@ html {
 }
 
 .btn-brochure::before,
-.btn-map-utilities::before {
+.btn-map-utilities::before,
+.btn-submit-visit-form::before {
     content: "";
     position: absolute;
     top: 0;
@@ -196,22 +197,29 @@ html {
     background: #be734b;
 }
 
+.btn-submit-visit-form::before {
+    background: #be734b;
+}
+
 .btn-map-utilities::before {
     background: #3b628b;
 }
 
 .btn-brochure:hover::before,
-.btn-map-utilities:hover::before {
+.btn-map-utilities:hover::before,
+.btn-submit-visit-form:hover::before {
     transform: scaleY(1) translateZ(0);
 }
 
 .btn-brochure img,
-.btn-map-utilities img {
+.btn-map-utilities img,
+.btn-submit-visit-form img {
     z-index: 1;
 }
 
 .btn-brochure span,
-.btn-map-utilities span {
+.btn-map-utilities span,
+.btn-submit-visit-form span {
     z-index: 1;
     position: relative;
     display: inline-block;
@@ -858,4 +866,22 @@ section.visit-model-house .inner-visit-model-house {
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+}
+
+.inner-visit-model-house .btn-submit-visit-form {
+    font-size: 1.6rem;
+    font-family: 'SegoeUI Semibold';
+    width: 28rem;
+    text-decoration: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    height: 6rem;
+    background-color: #cd9577;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 5rem;
+    cursor: pointer;
 }
