@@ -432,9 +432,124 @@ section.introduction {
     max-width: 250px;
 }
 
+section.position {
+    max-width: 100%;
+    position: relative;
+}
+
+section.position .inner-position {
+    background-color: #ffffff;
+    display: flex;
+    position: relative;
+}
+
+.inner-position .inner-position-left {
+    width: 49.0625%;
+    height: auto;
+    position: relative;
+}
+
+.inner-position .btn-next-position,
+.inner-position .btn-prev-position {
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    position: absolute;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    z-index: 80;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    background-color: #082340;
+    cursor: pointer;
+}
+
+.inner-position .btn-next-position:hover,
+.inner-position .btn-prev-position:hover {
+    background-color: #cd9577;
+}
+
+.inner-position .btn-prev-position {
+    right: 5.2rem;
+    bottom: -2.5rem;
+}
+
+.inner-position .btn-next-position {
+    right: 0;
+    bottom: -2.5rem;
+}
+
+.inner-position .btn-next-position img,
+.inner-position .btn-prev-position img {
+    text-align: center;
+    transition: content 1s cubic-bezier(.59, .08, .385, 1);
+    -webkit-transition: content 1s cubic-bezier(.59, .08, .385, 1);
+    -ms-transition: content 1s cubic-bezier(.59, .08, .385, 1);
+    cursor: pointer;
+    content: url(../img/btn-arrow-white.png);
+}
+
+.inner-position .btn-prev-position img {
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.inner-position .inner-position-right {
+    width: 50.9375%;
+    /* padding-left: 4rem; */
+    overflow-x: hidden;
+    position: relative;
+}
+
+.inner-position-right .container-position-right {
+    padding-left: 11.5rem;
+    padding-top: 9.5rem;
+}
+
+#owl-carousel-5 {
+    position: absolute;
+    bottom: 0;
+    left: 4rem;
+}
+
+.container-position-right h1 {
+    font-size: 4rem;
+    font-family: "UTM Americana Bold";
+    color: rgb(28, 32, 49);
+    line-height: 1.35;
+    text-align: left;
+}
+
+.container-position-right h1 strong,
+.utilities-right h1 strong {
+    color: #cd9577;
+}
+
+.container-position-right p {
+    font-size: 1.8rem;
+    font-family: "SegoeUI Regular";
+    color: rgba(8, 35, 64, 0.702);
+    line-height: 1.667;
+    text-align: left;
+    max-width: 505px;
+}
+
+.inner-position-right ul.container-dots {
+    list-style: none;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-right: 1rem;
+}
+
 section.utilities {
     width: 100%;
     background-color: #f4f4f7;
+    padding-bottom: 30rem;
 }
 
 section.utilities .inner-utilities {
@@ -446,14 +561,26 @@ section.utilities .inner-utilities {
 }
 
 .utilities .utilities-left {
-    width: 51.56%;
+    width: 51.5625%;
     position: relative;
 }
 
 .utilities .utilities-right {
-    width: 48.44%;
+    width: 48.4375%;
     position: relative;
 }
+
+.utilities .utilities-right .inner-utilities-right {
+    padding-left: 11.5rem;
+    padding-top: 14rem;
+}
+
+
+/* .utilities-right .utilities-image-right {
+    position: absolute;
+    bottom: -26%;
+    right: 0;
+} */
 
 .utilities .utilities-left img {
     width: 100%;
@@ -471,6 +598,14 @@ section.utilities .inner-utilities {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    box-shadow: 0px 5px 21px 0px rgba(48, 33, 73, 0.09);
+}
+
+.container-utilities-image-right {
+    direction: rtl;
+    right: 0;
+    position: absolute;
+    bottom: -17.5%;
 }
 
 .utilities .utilities-left .container-five-star span {
@@ -479,7 +614,7 @@ section.utilities .inner-utilities {
     color: rgb(30, 23, 19);
     line-height: 1.421;
     text-align: center;
-    box-shadow: 0px 5px 21px 0px rgba(48, 33, 73, 0.09);
+    /* box-shadow: 0px 5px 21px 0px rgba(48, 33, 73, 0.09); */
 }
 
 .circle-fill-level-1 {
@@ -542,11 +677,6 @@ section.utilities .inner-utilities {
         -o-transform: rotate(0) scale(.7) skew(1deg);
         opacity: .2
     }
-}
-
-.utilities .utilities-right {
-    padding-left: 11.5rem;
-    padding-top: 14rem;
 }
 
 .utilities-right h1 {
@@ -993,22 +1123,16 @@ section.contact .inner-contact {
     width: 46.875%;
     position: relative;
     display: inline-block;
-    height: 100%;
     background-color: #ffffff;
 }
 
 .inner-contact .inner-contact-left img {
-    position: absolute;
-    top: 0;
-    left: 0;
     object-fit: cover;
-    width: 100%;
-    height: 100%;
 }
 
 .inner-contact-right .contact-right-content {
     margin-left: -8rem;
-    height: 100%;
+    height: calc(100% - 28rem);
     padding-top: 14rem;
     padding-bottom: 14rem;
     max-width: calc(100% + 8rem);
@@ -1016,13 +1140,12 @@ section.contact .inner-contact {
 }
 
 .inner-contact-right .inner-contact-right-content {
-    background-color: #0d3f39;
-    width: calc(100% - 8rem);
+    background-color: #f7f6f9;
+    width: calc(100% - 4rem);
     height: 100%;
-    padding-left: 8rem;
-    padding-top: 16rem;
-    padding-bottom: 16rem;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .inner-contact-right .inner-contact-right-content img.vignette-pattern {
@@ -1041,4 +1164,49 @@ section.contact .inner-contact {
 
 .inner-contact-right .inner-contact-right-content h1 strong {
     color: #cd9577;
+}
+
+.inner-contact-right .inner-contact-right-content .container-content {}
+
+.inner-contact-right-content .address div {
+    background: transparent url(../img/address-icon.png) no-repeat scroll center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 16px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 3rem;
+}
+
+.inner-contact-right-content .address,
+.inner-contact-right-content .phone {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.inner-contact-right-content .address p,
+.inner-contact-right-content .phone p {
+    display: inline-block;
+    font-size: 1.8rem;
+    color: rgba(28, 32, 49, 0.8);
+    line-height: 1.667;
+    text-align: left;
+    font-family: "SegoeUI Regular";
+}
+
+.inner-contact-right-content .address p {
+    max-width: 39.5rem;
+}
+
+.inner-contact-right-content .phone div {
+    background: transparent url(../img/phone-icon.png) no-repeat scroll center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 3rem;
 }
