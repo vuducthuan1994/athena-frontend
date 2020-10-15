@@ -460,6 +460,90 @@ section.utilities .inner-utilities {
     height: auto;
 }
 
+.utilities .utilities-left .container-five-star {
+    width: 10rem;
+    height: 10rem;
+    background-color: #ffffff;
+    border-radius: 50%;
+    right: -5rem;
+    bottom: -5rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.utilities .utilities-left .container-five-star span {
+    font-size: 4.211rem;
+    font-family: "UTM Americana Bold";
+    color: rgb(30, 23, 19);
+    line-height: 1.421;
+    text-align: center;
+    box-shadow: 0px 5px 21px 0px rgba(48, 33, 73, 0.09);
+}
+
+.circle-fill-level-1 {
+    position: absolute;
+    width: 13rem;
+    height: 13rem;
+    margin: auto;
+    border: 2px solid transparent;
+    animation: five-star-fill 1.3s infinite ease-in-out;
+    border-radius: 50%;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.4;
+    box-shadow: 0px 5px 21px 0px rgba(48, 33, 73, 0.11);
+}
+
+@-moz-keyframes five-star-fill {
+    0% {
+        -moz-transform: rotate(0) scale(.7) skew(1deg);
+        opacity: .2
+    }
+    50% {
+        -moz-transform: rotate(0) -moz-scale(1) skew(1deg);
+        opacity: .2;
+        background-color: #ffffff;
+    }
+    100% {
+        -moz-transform: rotate(0) scale(.7) skew(1deg);
+        opacity: .2
+    }
+}
+
+@-webkit-keyframes five-star-fill {
+    0% {
+        -webkit-transform: rotate(0) scale(.7) skew(1deg);
+        opacity: .2
+    }
+    50% {
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+        opacity: .2;
+        background-color: #ffffff;
+    }
+    100% {
+        -webkit-transform: rotate(0) scale(.7) skew(1deg);
+        opacity: .2
+    }
+}
+
+@-o-keyframes five-star-fill {
+    0% {
+        -o-transform: rotate(0) scale(.7) skew(1deg);
+        opacity: .2
+    }
+    50% {
+        -o-transform: rotate(0) scale(1) skew(1deg);
+        opacity: .2;
+        background-color: #ffffff;
+    }
+    100% {
+        -o-transform: rotate(0) scale(.7) skew(1deg);
+        opacity: .2
+    }
+}
+
 .utilities .utilities-right {
     padding-left: 11.5rem;
     padding-top: 14rem;
