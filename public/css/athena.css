@@ -43,6 +43,27 @@ html {
 
 .container-header .nav li {
     margin: auto 0;
+    position: relative;
+}
+
+.container-header .nav li::before {
+    position: absolute;
+    bottom: -15px;
+    left: calc(50% - 3px);
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ffffff;
+    content: "";
+    opacity: 0;
+    transition: color .5s cubic-bezier(.59, .08, .385, 1);
+    -webkit-transition: color .5s cubic-bezier(.59, .08, .385, 1);
+    -ms-transition: color .5s cubic-bezier(.59, .08, .385, 1);
+}
+
+.container-header .nav li.active::before {
+    opacity: 1;
 }
 
 .container-header .nav li a {
@@ -736,4 +757,105 @@ section .inner-news {
     line-height: 1.667;
     text-align: left;
     margin: 0;
+}
+
+section.footer {
+    width: 100%;
+    background-color: #061d35;
+}
+
+section.footer .inner-footer {
+    padding-top: 10rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    background-color: #061d35;
+}
+
+.footer .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    line-height: 8.8rem;
+    border-top: 2px solid #2b3f53;
+}
+
+.footer .footer-bottom p {
+    font-size: 1.2rem;
+    font-family: "SegoeUI Light";
+    color: rgba(255, 255, 255, 0.502);
+    text-align: center;
+    margin: 0;
+}
+
+section.visit-model-house {
+    width: 100%;
+    background-color: #0a2542;
+}
+
+section.visit-model-house .inner-visit-model-house {
+    padding-top: 39rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #0a2542;
+}
+
+.inner-visit-model-house h1 {
+    font-size: 4rem;
+    font-family: "UTM Americana Bold";
+    color: #ffffff;
+    line-height: 1.35;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.inner-visit-model-house .title-section span {
+    color: #ffffff;
+}
+
+.inner-visit-model-house .title-section div {
+    background-color: #ffffff;
+}
+
+.inner-visit-model-house .form-visit {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    margin-top: 3rem;
+}
+
+.inner-visit-model-house .form-visit input {
+    background-color: transparent;
+    border: none;
+    line-height: 5rem;
+    border-bottom: 2px solid #2f455e;
+    width: calc(33% - 2rem);
+    font-size: 1.8rem;
+    font-family: "SegoeUI Regular";
+    color: #ffffff;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.inner-visit-model-house .form-visit input:hover {
+    border-bottom: 2px solid #8592a1;
+}
+
+.inner-visit-model-house .form-visit input:hover::placeholder {
+    color: #ffffff;
+}
+
+.inner-visit-model-house .form-visit input::placeholder {
+    font-size: 1.8rem;
+    font-family: "SegoeUI Regular";
+    color: rgba(255, 255, 255, 0.502);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
