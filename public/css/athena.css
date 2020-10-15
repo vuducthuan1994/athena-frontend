@@ -969,3 +969,76 @@ section.visit-model-house .inner-visit-model-house {
     margin-top: 5rem;
     cursor: pointer;
 }
+
+section.contact {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+section.contact .inner-contact {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #ffffff;
+    display: flex;
+}
+
+.inner-contact .inner-contact-left {
+    width: 53.125%;
+    height: auto;
+    display: inline-block;
+}
+
+.inner-contact .inner-contact-right {
+    width: 46.875%;
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.inner-contact .inner-contact-left img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.inner-contact-right .contact-right-content {
+    margin-left: -8rem;
+    height: 100%;
+    padding-top: 14rem;
+    padding-bottom: 14rem;
+    max-width: calc(100% + 8rem);
+    background-color: transparent;
+}
+
+.inner-contact-right .inner-contact-right-content {
+    background-color: #0d3f39;
+    width: calc(100% - 8rem);
+    height: 100%;
+    padding-left: 8rem;
+    padding-top: 16rem;
+    padding-bottom: 16rem;
+    position: relative;
+}
+
+.inner-contact-right .inner-contact-right-content img.vignette-pattern {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.inner-contact-right .inner-contact-right-content h1 {
+    font-size: 4rem;
+    font-family: "UTM Americana Bold";
+    color: rgb(8, 35, 64);
+    line-height: 1.35;
+    text-align: left;
+}
+
+.inner-contact-right .inner-contact-right-content h1 strong {
+    color: #cd9577;
+}
