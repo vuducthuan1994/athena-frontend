@@ -447,6 +447,7 @@ section.position .inner-position {
     width: 49.0625%;
     height: auto;
     position: relative;
+    padding-bottom: 27rem;
 }
 
 .inner-position .btn-next-position,
@@ -510,7 +511,7 @@ section.position .inner-position {
 }
 
 .container-owl-4 {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -521,8 +522,30 @@ section.position .inner-position {
 }
 
 #owl-carousel-5 {
-    margin-left: 4rem;
-    margin-top: 13rem;
+    /* margin-left: 4rem;
+    margin-top: 13rem; */
+    position: absolute;
+    left: 4rem;
+}
+
+#owl-carousel-5 .owl-item-position {
+    position: relative;
+}
+
+#owl-carousel-5 .owl-item-position .container-text-preview {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+}
+
+#owl-carousel-5 .owl-item-position .container-text-preview h3 {
+    font-size: 2.4rem;
+    font-family: "UTM Americana Bold";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: left;
+    margin: 0;
+    max-width: 225px;
 }
 
 .container-position-right h1 {
@@ -1119,8 +1142,10 @@ section.contact .inner-contact {
     max-width: 1280px;
     margin: 0 auto;
     position: relative;
-    background-color: #ffffff;
+    background-color: transparent;
     display: flex;
+    margin-bottom: -29.5rem;
+    z-index: 1;
 }
 
 .inner-contact .inner-contact-left {
@@ -1133,7 +1158,7 @@ section.contact .inner-contact {
     width: 46.875%;
     position: relative;
     display: inline-block;
-    background-color: #ffffff;
+    background-color: transparent;
 }
 
 .inner-contact .inner-contact-left img {
@@ -1176,7 +1201,9 @@ section.contact .inner-contact {
     color: #cd9577;
 }
 
-.inner-contact-right .inner-contact-right-content .container-content {}
+.inner-contact-right .inner-contact-right-content .container-content {
+    padding-left: 8rem;
+}
 
 .inner-contact-right-content .address div {
     background: transparent url(../img/address-icon.png) no-repeat scroll center center;

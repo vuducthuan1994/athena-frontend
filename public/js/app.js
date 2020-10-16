@@ -45,7 +45,7 @@ function owlDotsForPositionSlider() {
         items: 2.5,
         nav: false,
         dots: false,
-        loop: true,
+        autoHeight: true,
         autoplay: false,
         center: false,
         margin: 40,
