@@ -2,6 +2,13 @@ html {
     font-size: 10px;
 }
 
+.container-header.background-header-fixed-desktop {
+    padding-bottom: 1rem !important;
+    padding-top: 1rem !important;
+    background-color: #061d35 !important;
+    z-index: 100 !important;
+}
+
 .container {
     width: 100%;
     margin-right: auto;
@@ -28,6 +35,9 @@ html {
     padding-left: 5rem;
     padding-right: 5rem;
     padding-top: 5rem;
+    transition: all .5s cubic-bezier(.59, .08, .385, 1);
+    -webkit-transition: all .5s cubic-bezier(.59, .08, .385, 1);
+    -ms-transition: all .5s cubic-bezier(.59, .08, .385, 1);
 }
 
 .nav {
@@ -82,6 +92,10 @@ html {
     text-decoration: none;
     background-color: transparent;
     position: relative;
+}
+
+.container-header .nav li.active a {
+    color: #ffffff;
 }
 
 .container-header .nav li a:hover {
@@ -308,17 +322,23 @@ html {
 
 .header-background-image .fb-logo img {
     text-align: center;
-    transition: all .5s cubic-bezier(.59, .08, .385, 1);
-    -webkit-transition: all .5s cubic-bezier(.59, .08, .385, 1);
-    -ms-transition: all .5s cubic-bezier(.59, .08, .385, 1);
+    transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
     content: url(../img/fb-logo.png);
     line-height: 6rem;
 }
 
+.header-background-image .fb-logo img.scroll {
+    content: url(../img/fb-hover.png);
+}
+
+.header-background-image .phone img.scroll {
+    content: url(../img/phone-hover.png);
+}
+
 .header-background-image .phone img {
-    transition: all .5s cubic-bezier(.59, .08, .385, 1);
-    -webkit-transition: all .5s cubic-bezier(.59, .08, .385, 1);
-    -ms-transition: all .5s cubic-bezier(.59, .08, .385, 1);
+    transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
     content: url(../img/phone-logo.png);
     line-height: 6rem;
 }
@@ -462,7 +482,7 @@ section.position .inner-position {
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    z-index: 80;
+    z-index: 1;
     align-items: center;
     display: flex;
     justify-content: space-around;
@@ -498,12 +518,12 @@ section.position .inner-position {
 }
 
 .container-owl-carousel-6 .btn-next-libary {
-    right: 0;
+    right: 2.5rem;
     bottom: calc(50% - 2.5rem);
 }
 
 .container-owl-carousel-6 .btn-prev-libary {
-    left: 0;
+    left: 2.5rem;
     bottom: calc(50% - 2.5rem);
 }
 
@@ -841,7 +861,7 @@ section.image-libary {
     background-color: #f4f4f7;
 }
 
-.image-libary .inner-image-libary {
+.image-libary .inner-image-libary .image-libary-header {
     max-width: 1280px;
     margin: 0 auto;
     background-color: #f4f4f7;
@@ -858,6 +878,17 @@ section.image-libary {
 
 .image-libary-left h1 strong {
     color: #cd9577;
+}
+
+.image-libary-content {
+    margin-top: 3rem;
+}
+
+.image-libary-content .image-libary-content-bottom {
+    background-color: #ffffff;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .project-development .inner-project-development {
@@ -1019,8 +1050,17 @@ section .inner-news {
 
 .container-owl-carousel-6 {
     position: relative;
-    width: 100%;
+    width: calc(100% - 10rem);
     background-color: #ffffff;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.image-libary-content-bottom .inner-content {
+    position: absolute;
+    top: -14rem;
+    z-index: 88;
+    padding: 4rem;
 }
 
 .news-content {
