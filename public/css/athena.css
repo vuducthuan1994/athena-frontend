@@ -499,12 +499,12 @@ section.position .inner-position {
 
 .container-owl-carousel-6 .btn-next-libary {
     right: 0;
-    bottom: 0;
+    bottom: calc(50% - 2.5rem);
 }
 
 .container-owl-carousel-6 .btn-prev-libary {
     left: 0;
-    bottom: 0;
+    bottom: calc(50% - 2.5rem);
 }
 
 .inner-position .btn-prev-position img,
