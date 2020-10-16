@@ -64,15 +64,14 @@ function activeRoute() {
 
 function owlDotsForPositionSlider() {
     $('#owl-carousel-5').owlCarousel({
-        lazyLoad: true,
         items: 2.5,
         nav: false,
         dots: false,
-        autoHeight: true,
         autoplay: false,
         center: false,
         margin: 40,
-        dots: false
+        dots: false,
+        autoHeight: false,
     });
 }
 
@@ -94,7 +93,6 @@ function owlPositionInit() {
 
 function owlImageLibaryInit() {
     $('#owl-carousel-6').owlCarousel({
-        lazyLoad: true,
         items: 1,
         nav: false,
         dots: false,
@@ -127,7 +125,7 @@ function owlLibaryOwlInit() {
         items: 3,
         center: false,
         nav: false,
-        autoHeight: true,
+        autoHeight: false,
         dots: false,
         loop: true,
         autoplay: true,
