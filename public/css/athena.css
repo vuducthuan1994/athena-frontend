@@ -1061,6 +1061,7 @@ section .inner-news {
     top: -14rem;
     z-index: 88;
     padding: 4rem;
+    background-color: #ffffff;
 }
 
 .news-content {
