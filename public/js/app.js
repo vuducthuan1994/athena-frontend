@@ -10,6 +10,7 @@ $(document).ready(function() {
     owlLibaryController();
     ScrollListener();
     owlLibaryOwlInit();
+    activeRoute();
 });
 
 function owlApartmentInit() {
@@ -42,6 +43,15 @@ function owlDevelopmentProjectInit() {
         autoplay: false,
         margin: 95
     });
+}
+
+function activeRoute() {
+
+    $("header .nav li.nav-item").click(function(event) {
+        $("header .nav li.nav-item").removeClass('active');
+        $(this).addClass('active');
+    });
+
 }
 
 function owlDotsForPositionSlider() {
@@ -80,7 +90,7 @@ function owlImageLibaryInit() {
         loop: false,
         autoplay: false,
         center: false,
-        nav: false,
+
         margin: 10,
         animateIn: 'fadeIn', // add this
         animateOut: 'fadeOut', // and this
@@ -104,11 +114,11 @@ function owlLibaryOwlInit() {
     $('#owl-carousel-7').owlCarousel({
         items: 3,
         center: false,
-        nav: false,
+        nav: true,
         autoHeight: true,
         dots: false,
-        loop: false,
-        autoplay: false,
+        loop: true,
+        autoplay: true,
         margin: 40
     });
 }

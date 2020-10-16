@@ -122,8 +122,14 @@ html {
 
 .slogan-text {
     position: absolute;
-    top: 36.5rem;
-    left: 32rem;
+    top: 36.5em;
+    left: 32em;
+}
+
+@media only screen and (max-width: 1366px) {
+    .inner-background-image {
+        font-size: 6px;
+    }
 }
 
 .slogan-text h2 {
@@ -250,7 +256,8 @@ html {
     transform: scale(1.2);
 } */
 
-.header-background-image a {
+.header-background-image a.fb-logo,
+.header-background-image a.phone {
     position: fixed;
 }
 
@@ -279,16 +286,16 @@ html {
     text-align: center;
     display: flex;
     justify-content: space-around;
-    /* border: #cac6bd 3px solid; */
     border-radius: 50%;
     width: 6rem;
     height: 6rem;
     border-style: solid;
     border-width: 2px;
     border-color: #b4cddc;
-    margin-top: 26.5rem;
     cursor: pointer;
-    /* box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.3); */
+    position: absolute;
+    left: 33em;
+    bottom: 10em;
 }
 
 .btn-next-screen img {
@@ -325,7 +332,6 @@ html {
     transition: opacity 1s ease;
     -webkit-transition: opacity 1s ease;
     content: url(../img/fb-logo.png);
-    line-height: 6rem;
 }
 
 .header-background-image .fb-logo img.scroll {
@@ -340,7 +346,6 @@ html {
     transition: opacity 1s ease;
     -webkit-transition: opacity 1s ease;
     content: url(../img/phone-logo.png);
-    line-height: 6rem;
 }
 
 section.introduction {
@@ -455,6 +460,7 @@ section.introduction {
 section.position {
     max-width: 100%;
     position: relative;
+    margin-top: 14.5rem;
 }
 
 section.position .inner-position {
@@ -556,15 +562,34 @@ section.position .inner-position {
     position: relative;
 }
 
-#owl-carousel-5 {
+.container-owl-carousel-5 {
     /* margin-left: 4rem;
     margin-top: 13rem; */
     position: absolute;
     left: 4rem;
+    bottom: 14.5rem;
 }
 
 #owl-carousel-5 .owl-item-position {
     position: relative;
+}
+
+#owl-carousel-5 .owl-item-position .container-icon-preview {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    text-align: center;
+    top: -3rem;
+    left: 3rem;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    background-color: #cd9577;
+    border-radius: 50%;
 }
 
 #owl-carousel-5 .owl-item-position .container-text-preview {
@@ -617,7 +642,6 @@ section.position .inner-position {
 section.utilities {
     width: 100%;
     background-color: #f4f4f7;
-    padding-bottom: 30rem;
 }
 
 section.utilities .inner-utilities {
@@ -626,6 +650,13 @@ section.utilities .inner-utilities {
     display: flex;
     position: relative;
     background-color: #f4f4f7;
+    padding-bottom: 30rem;
+}
+
+.inner-utilities .vignette-pattern {
+    position: absolute;
+    bottom: -7.8rem;
+    left: 0;
 }
 
 .utilities .utilities-left {
@@ -852,19 +883,18 @@ section .inner-apartment {
 section.project-development {
     width: 100%;
     background-color: #f4f4f7;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    margin-bottom: 15.5rem;
 }
 
 section.image-libary {
     width: 100%;
-    background-color: #f4f4f7;
+    background-color: #ffffff;
 }
 
 .image-libary .inner-image-libary .image-libary-header {
     max-width: 1280px;
     margin: 0 auto;
-    background-color: #f4f4f7;
+    background-color: #ffffff;
 }
 
 .image-libary-left h1 {
@@ -898,6 +928,21 @@ section.image-libary {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.inner-project-development .vignette-pattern-1 {
+    position: absolute;
+    top: -7.8rem;
+    left: 0;
+}
+
+.inner-project-development .vignette-pattern-2 {
+    right: 0;
+    bottom: -7.8rem;
+    position: absolute;
 }
 
 .project-development-left h1 {
@@ -966,6 +1011,7 @@ section .inner-news {
     max-width: 1280px;
     margin: 0 auto;
     padding-top: 13.5rem;
+    padding-bottom: 16.5rem;
 }
 
 .news-header,
@@ -1060,8 +1106,14 @@ section .inner-news {
     position: absolute;
     top: -14rem;
     z-index: 88;
-    padding: 4rem;
     background-color: #ffffff;
+    max-width: 1280px;
+    overflow-x: hidden;
+    padding: 4rem;
+}
+
+#owl-carousel-7 {
+    max-width: calc(1280px - 8rem)
 }
 
 .news-content {
@@ -1231,6 +1283,7 @@ section.visit-model-house .inner-visit-model-house {
 section.contact {
     width: 100%;
     background-color: #ffffff;
+    padding-top: 26.5rem;
 }
 
 section.contact .inner-contact {
