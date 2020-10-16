@@ -509,10 +509,20 @@ section.position .inner-position {
     padding-top: 9.5rem;
 }
 
-#owl-carousel-5 {
+.container-owl-4 {
     position: absolute;
-    bottom: 0;
-    left: 4rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#owl-carousel-4 {
+    position: relative;
+}
+
+#owl-carousel-5 {
+    margin-left: 4rem;
+    margin-top: 13rem;
 }
 
 .container-position-right h1 {
