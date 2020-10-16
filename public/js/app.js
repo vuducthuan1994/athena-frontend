@@ -126,13 +126,12 @@ function owlLibaryOwlInit() {
     $('#owl-carousel-7').owlCarousel({
         items: 3,
         center: false,
-        nav: true,
+        nav: false,
         autoHeight: true,
         dots: false,
         loop: true,
         autoplay: true,
-        margin: 40,
-        lazyLoad: true
+        margin: 40
     });
 }
 
