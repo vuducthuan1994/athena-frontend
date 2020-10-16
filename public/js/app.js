@@ -6,6 +6,7 @@ $(document).ready(function() {
     owlPositionInit();
     owlPositionController();
     owlDotsForPositionSlider();
+    owlImageLibaryInit();
 });
 
 function owlApartmentInit() {
@@ -55,6 +56,21 @@ function owlDotsForPositionSlider() {
 
 function owlPositionInit() {
     $('#owl-carousel-4').owlCarousel({
+        items: 1,
+        nav: false,
+        dots: false,
+        loop: false,
+        autoplay: false,
+        center: false,
+        nav: false,
+        margin: 10,
+        animateIn: 'fadeIn', // add this
+        animateOut: 'fadeOut', // and this
+    });
+}
+
+function owlImageLibaryInit() {
+    $('#owl-carousel-6').owlCarousel({
         items: 1,
         nav: false,
         dots: false,

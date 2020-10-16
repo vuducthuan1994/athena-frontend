@@ -451,7 +451,9 @@ section.position .inner-position {
 }
 
 .inner-position .btn-next-position,
-.inner-position .btn-prev-position {
+.inner-position .btn-prev-position,
+.container-owl-carousel-6 .btn-next-libary,
+.container-owl-carousel-6 .btn-prev-libary {
     width: 5rem;
     height: 5rem;
     text-align: center;
@@ -484,7 +486,9 @@ section.position .inner-position {
 }
 
 .inner-position .btn-next-position img,
-.inner-position .btn-prev-position img {
+.inner-position .btn-prev-position img,
+.container-owl-carousel-6 .btn-next-libary img,
+.container-owl-carousel-6 .btn-prev-libary img {
     text-align: center;
     transition: content 1s cubic-bezier(.59, .08, .385, 1);
     -webkit-transition: content 1s cubic-bezier(.59, .08, .385, 1);
@@ -493,7 +497,18 @@ section.position .inner-position {
     content: url(../img/btn-arrow-white.png);
 }
 
-.inner-position .btn-prev-position img {
+.container-owl-carousel-6 .btn-next-libary {
+    right: 0;
+    bottom: 0;
+}
+
+.container-owl-carousel-6 .btn-prev-libary {
+    left: 0;
+    bottom: 0;
+}
+
+.inner-position .btn-prev-position img,
+.container-owl-carousel-6 .btn-prev-libary img {
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
@@ -973,15 +988,18 @@ section .inner-news {
     -ms-transition: all .5s cubic-bezier(.59, .08, .385, 1);
 }
 
-.news-header-right .news-header-right-menu li:hover {
+.news-header-right .news-header-right-menu li:hover,
+.image-libary-right ul.image-libary-right-menu li:hover {
     color: rgb(205, 149, 119);
 }
 
-.news-header-right .news-header-right-menu li.active:before {
+.news-header-right .news-header-right-menu li.active:before,
+.image-libary-right ul.image-libary-right-menu li.active:before {
     opacity: 1;
 }
 
-.news-header-right .news-header-right-menu li::before {
+.news-header-right .news-header-right-menu li::before,
+.image-libary-right ul.image-libary-right-menu li::before {
     position: absolute;
     bottom: -20px;
     left: calc(50% - 5px);
@@ -994,8 +1012,15 @@ section .inner-news {
     opacity: 0;
 }
 
-.news-header-right .news-header-right-menu li.active {
+.news-header-right .news-header-right-menu li.active,
+.image-libary-right ul.image-libary-right-menu li.active {
     color: rgb(205, 149, 119);
+}
+
+.container-owl-carousel-6 {
+    position: relative;
+    width: 100%;
+    background-color: #ffffff;
 }
 
 .news-content {
