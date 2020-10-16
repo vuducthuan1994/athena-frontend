@@ -16,6 +16,7 @@ $(document).ready(function() {
 function owlApartmentInit() {
     // SLider mặt bằng căn hộ
     $('#owl-carousel-1').owlCarousel({
+        lazyLoad: true,
         dotsContainer: '#owl-carousel-1-dots',
         items: 1,
         center: true,
@@ -25,15 +26,22 @@ function owlApartmentInit() {
         autoplay: false
     });
     $('.owl-dot').click(function() {
-        const _idx = $(this).index() + 1;
-        $('#owl-carousel-1').trigger('to.owl.carousel', [$(this).index(), 500]);
+        const _idx = $(this).index();
+        $('#owl-carousel-1').trigger('to.owl.carousel', [_idx, 500]);
         $(`.apartment-left h2`).removeClass("active");
-        $(`.apartment-left .typical-grounds-${_idx}  h2`).addClass("active");
+        $(`.apartment-left .typical-grounds-${_idx+1}  h2`).addClass("active");
+    });
+
+    $('.typical-grounds h2').click(function() {
+        $(`.apartment-left h2`).removeClass("active");
+        $(this).addClass("active");
+        $('#owl-carousel-1').trigger('to.owl.carousel', [$(this).data("slide"), 500]);
     });
 }
 
 function owlDevelopmentProjectInit() {
     $('#owl-carousel-2').owlCarousel({
+        lazyLoad: true,
         items: 2,
         center: false,
         nav: false,
@@ -56,6 +64,7 @@ function activeRoute() {
 
 function owlDotsForPositionSlider() {
     $('#owl-carousel-5').owlCarousel({
+        lazyLoad: true,
         items: 2.5,
         nav: false,
         dots: false,
@@ -69,6 +78,7 @@ function owlDotsForPositionSlider() {
 
 function owlPositionInit() {
     $('#owl-carousel-4').owlCarousel({
+        lazyLoad: true,
         items: 1,
         nav: false,
         dots: false,
@@ -84,13 +94,14 @@ function owlPositionInit() {
 
 function owlImageLibaryInit() {
     $('#owl-carousel-6').owlCarousel({
+        lazyLoad: true,
         items: 1,
         nav: false,
         dots: false,
         loop: false,
         autoplay: false,
         center: false,
-
+        autoHeight: false,
         margin: 10,
         animateIn: 'fadeIn', // add this
         animateOut: 'fadeOut', // and this
@@ -106,7 +117,8 @@ function owlNewsInit() {
         dots: false,
         loop: true,
         autoplay: false,
-        margin: 40
+        margin: 40,
+        lazyLoad: true
     });
 }
 
@@ -119,7 +131,8 @@ function owlLibaryOwlInit() {
         dots: false,
         loop: true,
         autoplay: true,
-        margin: 40
+        margin: 40,
+        lazyLoad: true
     });
 }
 
@@ -171,7 +184,6 @@ function owlDevelopmentController() {
 function ScrollListener() {
     $(window).scroll(function() {
         var scrollPosition = $(window).scrollTop();
-        console.log(scrollPosition);
         if (window.matchMedia('screen and (min-width: 900px)').matches) {
             var headerHeight = $(".header-background-image").height();
             if ((scrollPosition + 300) > headerHeight) {
