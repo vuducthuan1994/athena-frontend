@@ -118,6 +118,18 @@ function owlNewsInit() {
         margin: 40,
         lazyLoad: true
     });
+    var owl3 = $('#owl-carousel-3');
+    // Go to the next item of slider text
+    $('.inner-news .btn-next-post').click(function() {
+        owl3.trigger('next.owl.carousel', [500]);
+    });
+
+    // Go to the previous item of sliderText
+    $('.inner-news .btn-prev-post').click(function() {
+        // With optional speed parameter
+        // Parameters has to be in square bracket '[]'
+        owl3.trigger('prev.owl.carousel', [500]);
+    });
 }
 
 function owlLibaryOwlInit() {
