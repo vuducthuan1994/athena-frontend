@@ -457,8 +457,8 @@ section.introduction {
 .introduction-left .building-infomation h4 {
     font-size: 2rem;
     font-family: "SegoeUI Light";
-    color: #082340;
     margin: auto 0;
+    color: rgb(8, 35, 64);
 }
 
 .introduction-left .building-infomation h5 {
@@ -1089,8 +1089,10 @@ section .inner-news {
 }
 
 .inner-news .owl-controller span.line {
-    width: calc(100% - 17rem);
+    max-width: calc(100% - 17rem);
+    min-width: calc(100% - 34rem);
     height: 2px;
+    /* width: auto; */
     background-color: #dddcdc;
     margin: auto 0;
 }
@@ -1099,7 +1101,6 @@ section .inner-news {
     display: flex;
     margin: auto 0;
     justify-content: space-between;
-    width: 15rem;
     align-items: center;
 }
 
@@ -1392,11 +1393,13 @@ section.visit-model-house .inner-visit-model-house {
     transition: all 0.5s ease-in-out;
 }
 
-.inner-visit-model-house .form-visit input:hover {
+.inner-visit-model-house .form-visit input:hover,
+.inner-visit-model-house .form-visit input:focus {
     border-bottom: 2px solid #8592a1;
 }
 
-.inner-visit-model-house .form-visit input:hover::placeholder {
+.inner-visit-model-house .form-visit input:hover::placeholder,
+.inner-visit-model-house .form-visit input:focus::placeholder {
     color: #ffffff;
 }
 
