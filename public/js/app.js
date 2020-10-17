@@ -25,12 +25,6 @@ function owlApartmentInit() {
         loop: true,
         autoplay: false
     });
-    $('.owl-dot').click(function() {
-        const _idx = $(this).index();
-        $('#owl-carousel-1').trigger('to.owl.carousel', [_idx, 500]);
-        $(`.apartment-left h2`).removeClass("active");
-        $(`.apartment-left .typical-grounds-${_idx+1}  h2`).addClass("active");
-    });
 
     $('.typical-grounds h2').click(function() {
         $(`.apartment-left h2`).removeClass("active");
