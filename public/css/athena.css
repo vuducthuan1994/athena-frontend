@@ -158,6 +158,8 @@ html {
 
 .slogan-text span {
     font-weight: bold;
+    font-family: "UTM Americana Bold";
+    font-size: 6rem;
 }
 
 .container-header .btn-brochure {
@@ -317,7 +319,7 @@ html {
     height: 6rem;
     border-style: solid;
     border-width: 2px;
-    border-color: #b4cddc;
+    border-color: #6d7d8e;
     cursor: pointer;
     position: absolute;
     left: 33em;
@@ -455,7 +457,7 @@ section.introduction {
 .introduction-left .building-infomation h4 {
     font-size: 2rem;
     font-family: "SegoeUI Light";
-    color: rgb(8, 35, 64);
+    color: #082340;
     margin: auto 0;
 }
 
@@ -1374,6 +1376,7 @@ section.visit-model-house .inner-visit-model-house {
 }
 
 .inner-visit-model-house .form-visit input {
+    outline: none;
     background-color: transparent;
     border: none;
     line-height: 5rem;
