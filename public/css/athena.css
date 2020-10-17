@@ -530,7 +530,7 @@ section.position .inner-position {
 }
 
 .inner-position .btn-prev-position {
-    right: 5.2rem;
+    right: 5rem;
     bottom: -2.5rem;
 }
 
@@ -584,10 +584,6 @@ section.position .inner-position {
     top: 0;
     left: 0;
     width: 100%;
-}
-
-#owl-carousel-4 {
-    position: relative;
 }
 
 .container-owl-carousel-5 {
