@@ -580,12 +580,12 @@ section.position .inner-position {
 }
 
 .detail-image .btn-next-libary {
-    right: 2.5rem;
+    right: -2.5rem;
     bottom: calc(50% - 2.5rem);
 }
 
 .detail-image .btn-prev-libary {
-    left: 2.5rem;
+    left: -2.5rem;
     bottom: calc(50% - 2.5rem);
 }
 
@@ -996,11 +996,12 @@ section.image-libary {
 
 .detail-image .show-image {
     width: 100%;
-    height: 100%;
     object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
+    max-height: 721px;
+}
+
+#owl-carousel-6 {
+    max-height: 721px;
 }
 
 .image-libary-content .image-libary-content-bottom {
@@ -1252,6 +1253,8 @@ section .inner-news {
 
 #owl-carousel-7 img {
     cursor: pointer;
+    max-height: 210px;
+    object-fit: cover;
 }
 
 .news-content {

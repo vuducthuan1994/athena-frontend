@@ -80,23 +80,9 @@ function owlDotsForPositionSlider() {
 
 
 
-function owlImageLibaryInit() {
-    $('#owl-carousel-6').owlCarousel({
-        items: 1,
-        nav: false,
-        dots: false,
-        loop: false,
-        autoplay: false,
-        center: false,
-        autoHeight: false,
-        margin: 10,
-        animateIn: 'fadeIn', // add this
-        animateOut: 'fadeOut', // and this
-    });
-}
-
 function owlNewsInit() {
     $('#owl-carousel-3').owlCarousel({
+
         items: 3,
         center: false,
         nav: false,
@@ -121,8 +107,24 @@ function owlNewsInit() {
     });
 }
 
+
+
 function owlLibaryOwlInit() {
+    $('#owl-carousel-6').owlCarousel({
+        lazyLoad: true,
+        items: 1,
+        center: false,
+        nav: false,
+        autoHeight: false,
+        dots: false,
+        loop: true,
+        autoplay: false,
+        margin: 10,
+        animateIn: 'fadeIn', // add this
+        animateOut: 'fadeOut', // and this
+    });
     $('#owl-carousel-7').owlCarousel({
+        lazyLoad: true,
         items: 3,
         center: false,
         nav: false,
@@ -130,6 +132,7 @@ function owlLibaryOwlInit() {
         dots: false,
         loop: true,
         autoplay: false,
+        mouseDrag: false,
         margin: 40,
         responsive: {
             0: {
@@ -145,17 +148,24 @@ function owlLibaryOwlInit() {
             }
         }
     });
+    var owl6 = $('#owl-carousel-6');
     var owl7 = $('#owl-carousel-7');
+
+    owl6.on('changed.owl.carousel', function(e) {
+        // console.log("current: ", e.relatedTarget.current())
+        // console.log("current: ", e.item.index) //same
+        // console.log("total: ", e.item.count) //total
+        owl7.trigger('to.owl.carousel', e.item.index + 1)
+    });
     // Go to the next item of slider text
     $('.btn-next-libary').click(function() {
-        owl7.trigger('next.owl.carousel', [500]);
+        owl6.trigger('next.owl.carousel', [500]);
     });
 
     // Go to the previous item of sliderText
     $('.btn-prev-libary').click(function() {
         // With optional speed parameter
-        // Parameters has to be in square bracket '[]'
-        owl7.trigger('prev.owl.carousel', [500]);
+        owl6.trigger('prev.owl.carousel', [500]);
     });
 }
 
