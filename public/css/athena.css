@@ -9,6 +9,11 @@ html {
     z-index: 100 !important;
 }
 
+.container .background-header-fixed {
+    padding: 4rem !important;
+    background-color: #061d35 !important;
+}
+
 .container {
     width: 100%;
     margin-right: auto;
@@ -94,6 +99,10 @@ html {
     position: relative;
 }
 
+.container-header .header-right-mobile {
+    display: none;
+}
+
 .container-header .nav li.active a {
     color: #ffffff;
 }
@@ -114,7 +123,7 @@ html {
 
 .header-background-image {
     background: transparent url(../img/banner_desktop.jpg) no-repeat scroll center center;
-    height: 100vh;
+    height: calc(100vh);
     width: 100%;
     background-size: 100% 100%;
     position: relative;
@@ -162,6 +171,10 @@ html {
     font-size: 6rem;
 }
 
+.header-right {
+    margin: auto 0;
+}
+
 .container-header .btn-brochure {
     background-color: #cd9577;
     font-size: 1.6rem;
@@ -173,7 +186,6 @@ html {
     width: 21rem;
     height: 6rem;
     text-align: center;
-    margin: auto 0;
     text-decoration: none;
     position: relative;
     justify-content: center;
@@ -1541,4 +1553,51 @@ section.contact .inner-contact {
     height: 24px;
     display: inline-block;
     margin-right: 3rem;
+}
+
+#hamburger span {
+    position: relative;
+    display: inline-block;
+    content: '';
+    cursor: pointer;
+    border-radius: 1px;
+    height: 3px;
+    width: 20px;
+    background: white;
+}
+
+.is-main-menu-open {
+    position: relative;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .slogan-text h1 {
+        font-size: 4.2rem;
+    }
+    .slogan-text span {
+        font-size: 4.2rem;
+    }
+    .slogan-text {
+        position: absolute;
+        top: 39rem;
+        left: 4rem;
+    }
+    header .nav {
+        display: none;
+    }
+    .container-header .btn-brochure {
+        width: 17.5rem;
+        height: 5rem;
+    }
+    .header-right-mobile {
+        display: flex;
+        z-index: 100;
+    }
+    .container .container-header {
+        width: calc(768px - 8rem);
+        z-index: 90;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
 }

@@ -131,7 +131,20 @@ function owlLibaryOwlInit() {
         dots: false,
         loop: true,
         autoplay: true,
-        margin: 40
+        margin: 40,
+        responsive: {
+            0: {
+                autoplay: false
+            },
+            768: {
+                items: 2,
+                autoplay: false
+
+            },
+            1020: {
+
+            }
+        }
     });
 }
 
