@@ -1640,4 +1640,97 @@ section.contact .inner-contact {
     .introduction-left h1 {
         font-size: 3.6rem;
     }
+    .introduction .introduction-right {
+        position: unset;
+        top: unset;
+        left: unset;
+        max-height: 743px;
+        width: calc(100% - 16rem);
+        margin: 0 auto;
+        margin-top: 4rem;
+    }
+    .introduction-right img {
+        position: unset;
+        top: unset;
+        left: unset;
+        height: unset;
+        max-height: 743px;
+        box-shadow: 4rem 4rem #f0f0f0;
+    }
+    section.utilities .inner-utilities {
+        flex-direction: column-reverse;
+    }
+    .utilities .utilities-right .inner-utilities-right {
+        padding: 0;
+        padding-top: 21.5rem;
+    }
+    .utilities .utilities-right {
+        width: calc(100% - 8rem);
+        margin: 0 auto;
+    }
+    .utilities-right h1 {
+        font-size: 3.6rem;
+    }
+    .utilities .utilities-left {
+        width: calc(100% - 16rem);
+        margin: 0 auto;
+    }
+    .utilities .utilities-left img {
+        max-height: 675px;
+    }
+    .utilities .utilities-left .container-five-star {
+        right: unset;
+        left: -5rem;
+    }
+    .container-utilities-image-right {
+        bottom: unset;
+        right: unset;
+        max-width: 100%;
+        position: unset;
+        margin-top: -19.5rem;
+    }
+    .utilities .utilities-right {
+        position: unset;
+    }
+    section.utilities .inner-utilities {
+        padding-bottom: 21.6rem;
+    }
+    .container-utilities-image-right .utilities-image-right {
+        width: 100%;
+        max-width: 344px;
+        object-fit: cover;
+        position: absolute;
+        /* left: 0; */
+        right: 0;
+        bottom: 11.5rem;
+    }
+    .container-utilities-image-right .vignette-pattern-right {
+        max-width: 160px;
+        padding-right: 8.5rem;
+    }
+    .image-libary-content-bottom .inner-content {
+        max-width: calc(768px - 8rem);
+    }
+    .inner-utilities .vignette-pattern {
+        left: calc(50% - 4rem);
+    }
+    section .inner-apartment {
+        flex-direction: column-reverse;
+        position: relative;
+        padding-top: 22.8rem;
+    }
+    .container-title-apartment {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+    }
+    .container-title-apartment .title-section {
+        justify-content: center;
+    }
+    .apartment-left h1 {
+        display: inline-block;
+    }
 }
