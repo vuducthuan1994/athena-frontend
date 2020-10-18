@@ -235,6 +235,14 @@ html {
     position: relative;
 }
 
+#owl-carousel-5 .owl-item-position .image-preview {
+    max-width: 369px;
+}
+
+#owl-carousel-5 .owl-item-position .container-icon-preview img {
+    width: auto;
+}
+
 #owl-carousel-7 .owl-item-content::before,
 #owl-carousel-5 .owl-item-position::before {
     content: "";
@@ -250,6 +258,14 @@ html {
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+}
+
+#owl-carousel-5 .owl-item-position::before {
+    top: unset;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 3rem);
 }
 
 #owl-carousel-7 .owl-item-content:hover::before,
@@ -608,6 +624,7 @@ section.position .inner-position {
 
 #owl-carousel-5 .owl-item-position {
     position: relative;
+    padding-top: 3rem;
 }
 
 #owl-carousel-5 .owl-item-position .container-icon-preview {
@@ -615,7 +632,7 @@ section.position .inner-position {
     width: 6rem;
     height: 6rem;
     text-align: center;
-    top: -3rem;
+    top: 0;
     left: 3rem;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -626,12 +643,14 @@ section.position .inner-position {
     justify-content: space-around;
     background-color: #cd9577;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 #owl-carousel-5 .owl-item-position .container-text-preview {
     position: absolute;
     bottom: 3em;
     left: 3em;
+    cursor: pointer;
 }
 
 #owl-carousel-5 .owl-item-position .container-text-preview h3 {
@@ -1599,5 +1618,24 @@ section.contact .inner-contact {
         z-index: 90;
         padding-left: 4rem;
         padding-right: 4rem;
+    }
+    section.introduction {
+        display: block;
+        max-width: 768px;
+        padding-top: 10rem;
+    }
+    .introduction .introduction-left {
+        width: calc(100% - 8rem);
+        margin: 0 auto;
+    }
+    .introduction .vignette-pattern-left {
+        max-width: 161px;
+        right: 0;
+    }
+    .introduction .vignette-pattern-left img {
+        width: 100%;
+    }
+    .introduction-left h1 {
+        font-size: 3.6rem;
     }
 }
