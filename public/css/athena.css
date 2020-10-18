@@ -534,8 +534,8 @@ section.position .inner-position {
 
 .inner-position .btn-next-position,
 .inner-position .btn-prev-position,
-.container-owl-carousel-6 .btn-next-libary,
-.container-owl-carousel-6 .btn-prev-libary {
+.detail-image .btn-next-libary,
+.detail-image .btn-prev-libary {
     width: 5rem;
     height: 5rem;
     text-align: center;
@@ -569,8 +569,8 @@ section.position .inner-position {
 
 .inner-position .btn-next-position img,
 .inner-position .btn-prev-position img,
-.container-owl-carousel-6 .btn-next-libary img,
-.container-owl-carousel-6 .btn-prev-libary img {
+.detail-image .btn-next-libary img,
+.detail-image .btn-prev-libary img {
     text-align: center;
     transition: content 1s cubic-bezier(.59, .08, .385, 1);
     -webkit-transition: content 1s cubic-bezier(.59, .08, .385, 1);
@@ -579,18 +579,18 @@ section.position .inner-position {
     content: url(../img/btn-arrow-white.png);
 }
 
-.container-owl-carousel-6 .btn-next-libary {
+.detail-image .btn-next-libary {
     right: 2.5rem;
     bottom: calc(50% - 2.5rem);
 }
 
-.container-owl-carousel-6 .btn-prev-libary {
+.detail-image .btn-prev-libary {
     left: 2.5rem;
     bottom: calc(50% - 2.5rem);
 }
 
 .inner-position .btn-prev-position img,
-.container-owl-carousel-6 .btn-prev-libary img {
+.detail-image .btn-prev-libary img {
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
@@ -994,14 +994,13 @@ section.image-libary {
     margin-top: 3rem;
 }
 
-.image-libary-content #owl-carousel-6 .container-image-item {
-    position: relative;
-}
-
-.image-libary-content #owl-carousel-6 img.image-item {
+.detail-image .show-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .image-libary-content .image-libary-content-bottom {
@@ -1228,12 +1227,12 @@ section .inner-news {
     color: rgb(205, 149, 119);
 }
 
-.container-owl-carousel-6 {
+.detail-image {
     position: relative;
     width: calc(100% - 10rem);
     background-color: #ffffff;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    margin: 0 auto;
+    height: 721px;
 }
 
 .image-libary-content-bottom .inner-content {
@@ -1461,7 +1460,7 @@ section.visit-model-house .inner-visit-model-house {
 section.contact {
     width: 100%;
     background-color: #ffffff;
-    padding-top: 26.5rem;
+    margin-top: 26.5rem;
 }
 
 section.contact .inner-contact {

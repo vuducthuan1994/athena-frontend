@@ -4,8 +4,7 @@ $(document).ready(function() {
     owlDevelopmentController();
     owlNewsInit();
     owlDotsForPositionSlider();
-    owlImageLibaryInit();
-    owlLibaryController();
+
     ScrollListener();
     owlLibaryOwlInit();
     activeRoute();
@@ -130,7 +129,7 @@ function owlLibaryOwlInit() {
         autoHeight: false,
         dots: false,
         loop: true,
-        autoplay: true,
+        autoplay: false,
         margin: 40,
         responsive: {
             0: {
@@ -146,26 +145,25 @@ function owlLibaryOwlInit() {
             }
         }
     });
-}
-
-function owlPositionController() {
-
-}
-
-function owlLibaryController() {
-    var owl2 = $('#owl-carousel-6');
+    var owl7 = $('#owl-carousel-7');
     // Go to the next item of slider text
     $('.btn-next-libary').click(function() {
-        owl2.trigger('next.owl.carousel', [500]);
+        owl7.trigger('next.owl.carousel', [500]);
     });
 
     // Go to the previous item of sliderText
     $('.btn-prev-libary').click(function() {
         // With optional speed parameter
         // Parameters has to be in square bracket '[]'
-        owl2.trigger('prev.owl.carousel', [500]);
+        owl7.trigger('prev.owl.carousel', [500]);
     });
 }
+
+function owlPositionController() {
+
+}
+
+
 
 function owlDevelopmentController() {
     var owl2 = $('#owl-carousel-2');
